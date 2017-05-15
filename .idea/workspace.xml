@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30f444a9-9764-4369-be8b-7f1b56a44c26" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mymonero_app_js_node_modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/lint__local_modules" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/__assemble_cordova_www.node.js" afterPath="$PROJECT_DIR$/bin/__assemble_cordova_www.node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cordova_res/bin/_assemble_build.js" afterPath="$PROJECT_DIR$/cordova_res/bin/_assemble_build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/AboutWindow/Controllers/AboutWindowController.electron.main.js" afterPath="$PROJECT_DIR$/local_modules/AboutWindow/Controllers/AboutWindowController.electron.main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Animation/Vendor/velocity.js" afterPath="$PROJECT_DIR$/local_modules/Animation/Vendor/velocity.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Concurrency/BackgroundTaskExecutor.electron.js" afterPath="$PROJECT_DIR$/local_modules/Concurrency/BackgroundTaskExecutor.electron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Concurrency/BackgroundTaskExecutor_Interface.js" afterPath="$PROJECT_DIR$/local_modules/Concurrency/BackgroundTaskExecutor_Interface.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Concurrency/ipc.electron.child.js" afterPath="$PROJECT_DIR$/local_modules/Concurrency/ipc.electron.child.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Contacts/Models/Contact.js" afterPath="$PROJECT_DIR$/local_modules/Contacts/Models/Contact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Contacts/Views/AddContactView.web.js" afterPath="$PROJECT_DIR$/local_modules/Contacts/Views/AddContactView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Contacts/Views/ContactDetailsView.web.js" afterPath="$PROJECT_DIR$/local_modules/Contacts/Views/ContactDetailsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Contacts/Views/ContactsListCellView.web.js" afterPath="$PROJECT_DIR$/local_modules/Contacts/Views/ContactsListCellView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Contacts/Views/ContactsListView.web.js" afterPath="$PROJECT_DIR$/local_modules/Contacts/Views/ContactsListView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Contacts/Views/EditContactFromContactsTabView.web.js" afterPath="$PROJECT_DIR$/local_modules/Contacts/Views/EditContactFromContactsTabView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/DocumentPersister/DocumentPersister.Files.js" afterPath="$PROJECT_DIR$/local_modules/DocumentPersister/DocumentPersister.Files.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/DocumentPersister/fs_shim.cordova.js" afterPath="$PROJECT_DIR$/local_modules/DocumentPersister/fs_shim.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Emoji/Views/EmojiPickerControlView.web.js" afterPath="$PROJECT_DIR$/local_modules/Emoji/Views/EmojiPickerControlView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Emoji/emoji_set.js" afterPath="$PROJECT_DIR$/local_modules/Emoji/emoji_set.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/FilesystemUI/FilesystemUI.cordova.js" afterPath="$PROJECT_DIR$/local_modules/FilesystemUI/FilesystemUI.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/HostedMoneroAPIClient/HostedMoneroAPIClient.js" afterPath="$PROJECT_DIR$/local_modules/HostedMoneroAPIClient/HostedMoneroAPIClient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/HostedMoneroAPIClient/response_parser_utils.js" afterPath="$PROJECT_DIR$/local_modules/HostedMoneroAPIClient/response_parser_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/HostedMoneroAPIClient/tests/tests__imperatives.js" afterPath="$PROJECT_DIR$/local_modules/HostedMoneroAPIClient/tests/tests__imperatives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Lists/Views/ListCellView.web.js" afterPath="$PROJECT_DIR$/local_modules/Lists/Views/ListCellView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Lists/Views/ListView.web.js" afterPath="$PROJECT_DIR$/local_modules/Lists/Views/ListView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Locale/Locale.cordova.js" afterPath="$PROJECT_DIR$/local_modules/Locale/Locale.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Locale/Locale_Abstract.js" afterPath="$PROJECT_DIR$/local_modules/Locale/Locale_Abstract.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppRendererSetup/renderer_setup.electron.js" afterPath="$PROJECT_DIR$/local_modules/MMAppRendererSetup/renderer_setup.electron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/actionButtons.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/actionButtons.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/activityIndicators.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/activityIndicators.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/assetPreloader.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/assetPreloader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/emptyScreens.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/emptyScreens.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/forms.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/forms.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/labeledRangeInputs.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/labeledRangeInputs.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/navigationBarButtons.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/navigationBarButtons.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/tables.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/tables.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/tooltips.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/tooltips.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/walletColorPicker.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/walletColorPicker.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/walletMnemonicBox.web.js" afterPath="$PROJECT_DIR$/local_modules/MMAppUICommonComponents/walletMnemonicBox.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MainWindow/Controllers/MainWindowController.electron.main.js" afterPath="$PROJECT_DIR$/local_modules/MainWindow/Controllers/MainWindowController.electron.main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MainWindow/Views/RootTabBarAndContentView.electron.web.js" afterPath="$PROJECT_DIR$/local_modules/MainWindow/Views/RootTabBarAndContentView.electron.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MainWindow/Views/RootTabBarAndContentView_Base.web.js" afterPath="$PROJECT_DIR$/local_modules/MainWindow/Views/RootTabBarAndContentView_Base.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MainWindow/Views/index.cordova.js" afterPath="$PROJECT_DIR$/local_modules/MainWindow/Views/index.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/MainWindow/Views/index_context.electron.renderer.js" afterPath="$PROJECT_DIR$/local_modules/MainWindow/Views/index_context.electron.renderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Menus/MenuControllerController.renderer.js" afterPath="$PROJECT_DIR$/local_modules/Menus/MenuControllerController.renderer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Menus/MenuController_Abstract.js" afterPath="$PROJECT_DIR$/local_modules/Menus/MenuController_Abstract.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/OpenAlias/monero_openalias_utils.js" afterPath="$PROJECT_DIR$/local_modules/OpenAlias/monero_openalias_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/OpenAlias/openalias_utils.js" afterPath="$PROJECT_DIR$/local_modules/OpenAlias/openalias_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Passwords/Controllers/PasswordController.js" afterPath="$PROJECT_DIR$/local_modules/Passwords/Controllers/PasswordController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Passwords/Controllers/PasswordEntryViewController.web.js" afterPath="$PROJECT_DIR$/local_modules/Passwords/Controllers/PasswordEntryViewController.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Passwords/Views/EnterNewPasswordView.web.js" afterPath="$PROJECT_DIR$/local_modules/Passwords/Views/EnterNewPasswordView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Passwords/Views/ForgotPasswordView.web.js" afterPath="$PROJECT_DIR$/local_modules/Passwords/Views/ForgotPasswordView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Passwords/Views/PasswordEntryView.web.js" afterPath="$PROJECT_DIR$/local_modules/Passwords/Views/PasswordEntryView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Pasteboard/Pasteboard.cordova.js" afterPath="$PROJECT_DIR$/local_modules/Pasteboard/Pasteboard.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/RequestFunds/Models/FundsRequest.js" afterPath="$PROJECT_DIR$/local_modules/RequestFunds/Models/FundsRequest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/RequestFunds/Views/CreateRequestFormView.web.js" afterPath="$PROJECT_DIR$/local_modules/RequestFunds/Views/CreateRequestFormView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/RequestFunds/Views/FundsRequestDetailsView.web.js" afterPath="$PROJECT_DIR$/local_modules/RequestFunds/Views/FundsRequestDetailsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/RequestFunds/Views/FundsRequestsListCellView.web.js" afterPath="$PROJECT_DIR$/local_modules/RequestFunds/Views/FundsRequestsListCellView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/SelectView/CustomSelectView.web.js" afterPath="$PROJECT_DIR$/local_modules/SelectView/CustomSelectView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendFundsView.web.js" afterPath="$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendFundsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendTabContentView.web.js" afterPath="$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendTabContentView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Settings/Controllers/SettingsController.js" afterPath="$PROJECT_DIR$/local_modules/Settings/Controllers/SettingsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Settings/Views/SettingsView.web.js" afterPath="$PROJECT_DIR$/local_modules/Settings/Views/SettingsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/StackNavigation/Views/NavigationBarView.web.js" afterPath="$PROJECT_DIR$/local_modules/StackNavigation/Views/NavigationBarView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/StackNavigation/Views/StackAndModalNavigationView.web.js" afterPath="$PROJECT_DIR$/local_modules/StackNavigation/Views/StackAndModalNavigationView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/StackNavigation/Views/StackNavigationView.web.js" afterPath="$PROJECT_DIR$/local_modules/StackNavigation/Views/StackNavigationView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/TabBarView/TabBarAndContentView.web.js" afterPath="$PROJECT_DIR$/local_modules/TabBarView/TabBarAndContentView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/TabBarView/TabBarItemButtonView.web.js" afterPath="$PROJECT_DIR$/local_modules/TabBarView/TabBarItemButtonView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/URLBrowser/URLBrowser.cordova.js" afterPath="$PROJECT_DIR$/local_modules/URLBrowser/URLBrowser.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/URLOpening/URLOpeningController.cordova.js" afterPath="$PROJECT_DIR$/local_modules/URLOpening/URLOpeningController.cordova.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/UserIdle/UserIdleInWindowController.js" afterPath="$PROJECT_DIR$/local_modules/UserIdle/UserIdleInWindowController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Views/View.web.js" afterPath="$PROJECT_DIR$/local_modules/Views/View.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/WalletWizard/Controllers/AddWallet_WizardController.web.js" afterPath="$PROJECT_DIR$/local_modules/WalletWizard/Controllers/AddWallet_WizardController.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/WalletWizard/Views/BaseView_AWalletWizardScreen.web.js" afterPath="$PROJECT_DIR$/local_modules/WalletWizard/Views/BaseView_AWalletWizardScreen.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/WalletWizard/Views/CreateWallet_MetaInfo_View.web.js" afterPath="$PROJECT_DIR$/local_modules/WalletWizard/Views/CreateWallet_MetaInfo_View.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/WalletWizard/Views/UseExisting_MetaInfo_View.web.js" afterPath="$PROJECT_DIR$/local_modules/WalletWizard/Views/UseExisting_MetaInfo_View.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Wallets/Models/Wallet.js" afterPath="$PROJECT_DIR$/local_modules/Wallets/Models/Wallet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Wallets/Views/EditWalletView.web.js" afterPath="$PROJECT_DIR$/local_modules/Wallets/Views/EditWalletView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Wallets/Views/TransactionDetailsView.web.js" afterPath="$PROJECT_DIR$/local_modules/Wallets/Views/TransactionDetailsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Wallets/Views/WalletCellContentsView.web.js" afterPath="$PROJECT_DIR$/local_modules/Wallets/Views/WalletCellContentsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/Wallets/Views/WalletDetailsView.web.js" afterPath="$PROJECT_DIR$/local_modules/Wallets/Views/WalletDetailsView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/WalletsList/Views/WalletsListCellView.web.js" afterPath="$PROJECT_DIR$/local_modules/WalletsList/Views/WalletsListCellView.web.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/WindowDialogs/WindowDialogs.electron.js" afterPath="$PROJECT_DIR$/local_modules/WindowDialogs/WindowDialogs.electron.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/cryptonote_utils/biginteger.js" afterPath="$PROJECT_DIR$/local_modules/cryptonote_utils/biginteger.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/monero_utils/monero_config.js" afterPath="$PROJECT_DIR$/local_modules/monero_utils/monero_config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/monero_utils/monero_requestURI_utils.js" afterPath="$PROJECT_DIR$/local_modules/monero_utils/monero_requestURI_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/monero_utils/monero_sendingFunds_utils.js" afterPath="$PROJECT_DIR$/local_modules/monero_utils/monero_sendingFunds_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/monero_utils/monero_wallet_utils.js" afterPath="$PROJECT_DIR$/local_modules/monero_utils/monero_wallet_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/runtime_context/runtime_context.js" afterPath="$PROJECT_DIR$/local_modules/runtime_context/runtime_context.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/symmetric_cryptor/document_cryptor.js" afterPath="$PROJECT_DIR$/local_modules/symmetric_cryptor/document_cryptor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/symmetric_cryptor/symmetric_string_cryptor.js" afterPath="$PROJECT_DIR$/local_modules/symmetric_cryptor/symmetric_string_cryptor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local_modules/symmetric_cryptor/tests/tests.js" afterPath="$PROJECT_DIR$/local_modules/symmetric_cryptor/tests/tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack.cordova.config.js" afterPath="$PROJECT_DIR$/webpack.cordova.config.js" />
+    </list>
+    <ignored path="mymonero-app-js.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="mymonero-app-js" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="SendFundsView.web.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendFundsView.web.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="389" column="48" selection-start-line="389" selection-start-column="48" selection-end-line="389" selection-end-column="48" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".eslintrc.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JustSentTransactionDetailsView.web.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local_modules/SendFundsTab/Views/JustSentTransactionDetailsView.web.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.eslintrc.json" />
+        <option value="$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendFundsView.web.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1398" />
+    <option name="height" value="877" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SendFundsTab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mymonero-app-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SendFundsTab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.eslintrc.json" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v7.5.0/bin/node" />
+    <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="js.eslint.nodeInterpreter" value="project" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30f444a9-9764-4369-be8b-7f1b56a44c26" name="Default" comment="" />
+      <created>1494878005726</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1494878005726</updated>
+      <workItem from="1494878006880" duration="143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="143000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1398" height="877" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981844" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/local_modules/SendFundsTab/Views/JustSentTransactionDetailsView.web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local_modules/SendFundsTab/Views/SendFundsView.web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="389" column="48" selection-start-line="389" selection-start-column="48" selection-end-line="389" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
