@@ -114,7 +114,10 @@ class SendFundsView extends View
 			}
 			self.actionButtonsContainerView = view
 			{
-				// self._setup_actionButton_useCamera()
+				if (device.platform === 'Android')
+				{
+					self._setup_actionButton_useCamera()
+				}
 				self._setup_actionButton_chooseFile()
 			}
 			self.addSubview(view)
@@ -425,7 +428,53 @@ class SendFundsView extends View
 			false,
 			function(layer, e)
 			{
-				console.log("TODO: use camera to get QR code")
+				QRScanner.prepare(onDone); // show the prompt
+				function onDone(err, status) {
+					if (err) {
+						// here we can handle errors and clean up any loose ends.
+						console.error(err);
+					}
+					if (status.authorized) {
+						let mainDiv = document.body.childNodes[5]
+						let oldStyle = JSON.parse(JSON.stringify(mainDiv.style));
+
+						mainDiv.style = {}
+
+						QRScanner.show(function (status) {
+							QRScanner.scan(function (err, text) {
+								// TODO
+								if (err) {
+									// an error occurred, or the scan was canceled (error code `6`)
+								} else {
+									// The scan completed, display the contents of the QR code:
+									QRScanner.destroy(function (status) {
+										mainDiv.style.background = "#272527"
+										mainDiv.style.position = "absolute"
+										mainDiv.style.width = "100%"
+										mainDiv.style.height = "100%"
+										mainDiv.style.left = "0px"
+										mainDiv.style.top = "0px"
+										mainDiv.style.overflow = "hidden" // prevent scroll bar
+										document.body.style = {}
+										self._shared_didPickRequestURIStringForAutofill(text)
+									});
+								}
+							});
+
+						});
+
+					// TODO
+					} else if (status.denied) {
+						// The video preview will remain black, and scanning is disabled. We can
+						// try to ask the user to change their mind, but we'll have to send them
+						// to their device settings with `QRScanner.openSettings()`.
+					// TODO
+					} else {
+						// we didn't get permission, but we didn't get permanently denied. (On
+						// Android, a denial isn't permanent unless the user checks the "Don't
+						// ask again" box.) We can ask again at the next relevant opportunity.
+					}
+				}
 			},
 			self.context,
 			9, // px from top of btn - due to shorter icon
