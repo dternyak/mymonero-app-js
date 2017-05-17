@@ -11,6 +11,7 @@ electron_child_crashReport_tmp
 
 stats.json
 
+.idea/
 cordova_res/build/*
 cordova.android.build.json
 android_release.jks
