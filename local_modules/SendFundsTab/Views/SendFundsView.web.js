@@ -59,7 +59,7 @@ class SendFundsView extends View
 	{
 		super(options, context) // call super before `this`
 		//
-		const self = this 
+		const self = this
 		{
 			self.fromContact = options.fromContact || null
 		}
@@ -99,22 +99,25 @@ class SendFundsView extends View
 				const margin_fromWindowLeft = self.context.themeController.TabBarView_thickness() + margin_h // we need this for a position:fixed, width:100% container
 				const margin_fromWindowRight = margin_h
 				view = commonComponents_actionButtons.New_ActionButtonsContainerView(
-					margin_fromWindowLeft, 
-					margin_fromWindowRight, 
+					margin_fromWindowLeft,
+					margin_fromWindowRight,
 					self.context
 				)
 				view.layer.style.paddingLeft = "16px"
 			} else {
 				view = commonComponents_actionButtons.New_Stacked_ActionButtonsContainerView(
-					margin_h, 
-					margin_h, 
+					margin_h,
+					margin_h,
 					15,
 					self.context
 				)
 			}
 			self.actionButtonsContainerView = view
 			{
-				// self._setup_actionButton_useCamera()
+				if (device.platform === 'Android')
+				{
+					self._setup_actionButton_useCamera()
+				}
 				self._setup_actionButton_chooseFile()
 			}
 			self.addSubview(view)
@@ -165,7 +168,7 @@ class SendFundsView extends View
 		layer.style.marginLeft = "24px"
 		layer.ClearAndHideMessage()
 		self.validationMessageLayer = layer
-		self.layer.appendChild(layer)				
+		self.layer.appendChild(layer)
 	}
 	_setup_form_containerLayer()
 	{
@@ -173,8 +176,8 @@ class SendFundsView extends View
 		const containerLayer = document.createElement("div")
 		var paddingBottom;
 		if (self._isUsingRelativeNotFixedActionButtonsContainer() == false) {
-			paddingBottom = commonComponents_actionButtons.ActionButtonsContainerView_h 
-								+ commonComponents_actionButtons.ActionButtonsContainerView_bottomMargin 
+			paddingBottom = commonComponents_actionButtons.ActionButtonsContainerView_h
+								+ commonComponents_actionButtons.ActionButtonsContainerView_bottomMargin
 								+ 10
 		} else {
 			paddingBottom = 0
@@ -213,7 +216,7 @@ class SendFundsView extends View
 		self.form_containerLayer.appendChild(div)
 	}
 	_setup_form_amountInputLayer(tr)
-	{ 
+	{
 		const self = this
 		const pkg = commonComponents_forms.New_AmountInputFieldPKG(
 			self.context,
@@ -222,7 +225,7 @@ class SendFundsView extends View
 			{ // enter btn pressed
 				self._tryToGenerateSend()
 			}
-		)		
+		)
 		const div = pkg.containerLayer
 		div.style.paddingTop = "2px"
 		const labelLayer = pkg.labelLayer
@@ -313,7 +316,7 @@ class SendFundsView extends View
 		div.appendChild(layer)
 		{ // initial config
 			if (self.fromContact !== null) {
-				setTimeout( // must do this on the next tick so that we are already set on the navigation controller 
+				setTimeout( // must do this on the next tick so that we are already set on the navigation controller
 					function()
 					{
 						self.contactOrAddressPickerLayer.ContactPicker_pickContact(self.fromContact) // simulate user picking the contact
@@ -364,10 +367,10 @@ class SendFundsView extends View
 	}
 	_setup_form_addPaymentIDButtonView()
 	{
-		const self = this		
+		const self = this
 		const view = commonComponents_tables.New_clickableLinkButtonView(
-			"+ ADD PAYMENT ID", 
-			self.context, 
+			"+ ADD PAYMENT ID",
+			self.context,
 			function()
 			{
 				if (self.isFormDisabled !== true) {
@@ -420,12 +423,57 @@ class SendFundsView extends View
 	{
 		const self = this
 		const buttonView = commonComponents_actionButtons.New_ActionButtonView(
-			"Use Camera", 
-			self.context.crossPlatform_appBundledAssetsRootPath+"/SendFundsTab/Resources/actionButton_iconImage__useCamera@3x.png", 
+			"Use Camera",
+			self.context.crossPlatform_appBundledAssetsRootPath + "/SendFundsTab/Resources/actionButton_iconImage__useCamera@3x.png",
 			false,
-			function(layer, e)
-			{
-				console.log("TODO: use camera to get QR code")
+			function (layer, e) {
+				QRScanner.prepare(onDone); // show the prompt
+				function onDone(err, status) {
+					if (err) {
+						// here we can handle errors and clean up any loose ends.
+						console.error(err);
+					}
+					if (status.authorized) {
+						let mainDiv = document.body.childNodes[5]
+						let oldStyle = JSON.parse(JSON.stringify(mainDiv.style));
+
+						mainDiv.style = {}
+
+						QRScanner.show(function (status) {
+							QRScanner.scan(function (err, text) {
+								// TODO
+								if (err) {
+									// an error occurred, or the scan was canceled (error code `6`)
+								} else {
+									// The scan completed, display the contents of the QR code:
+									QRScanner.destroy(function (status) {
+										mainDiv.style.background = "#272527"
+										mainDiv.style.position = "absolute"
+										mainDiv.style.width = "100%"
+										mainDiv.style.height = "100%"
+										mainDiv.style.left = "0px"
+										mainDiv.style.top = "0px"
+										mainDiv.style.overflow = "hidden" // prevent scroll bar
+										document.body.style = {}
+										self._shared_didPickRequestURIStringForAutofill(text)
+									});
+								}
+							});
+
+						});
+
+					// TODO
+					} else if (status.denied) {
+						// The video preview will remain black, and scanning is disabled. We can
+						// try to ask the user to change their mind, but we'll have to send them
+						// to their device settings with `QRScanner.openSettings()`.
+					// TODO
+					} else {
+						// we didn't get permission, but we didn't get permanently denied. (On
+						// Android, a denial isn't permanent unless the user checks the "Don't
+						// ask again" box.) We can ask again at the next relevant opportunity.
+					}
+				}
 			},
 			self.context,
 			9, // px from top of btn - due to shorter icon
@@ -439,8 +487,8 @@ class SendFundsView extends View
 	{
 		const self = this
 		const buttonView = commonComponents_actionButtons.New_ActionButtonView(
-			"Choose File", 
-			self.context.crossPlatform_appBundledAssetsRootPath+"/SendFundsTab/Resources/actionButton_iconImage__chooseFile@3x.png", 
+			"Choose File",
+			self.context.crossPlatform_appBundledAssetsRootPath+"/SendFundsTab/Resources/actionButton_iconImage__chooseFile@3x.png",
 			true,
 			function(layer, e)
 			{
@@ -530,11 +578,11 @@ class SendFundsView extends View
 			const emitter = self.context.walletAppCoordinator
 			self._walletAppCoordinator_fn_EventName_didTrigger_sendFundsToContact = function(contact)
 			{
-				self.navigationController.DismissModalViewsToView( // whether we should force-dismiss these (create new contact) is debatable… 
-					null, 
+				self.navigationController.DismissModalViewsToView( // whether we should force-dismiss these (create new contact) is debatable…
+					null,
 					true, // null -> to top stack view
-					function() 
-					{ // must wait til done or 'currently transitioning' will race 
+					function()
+					{ // must wait til done or 'currently transitioning' will race
 						self.navigationController.PopToRootView( // now pop pushed stack views - essential for the case they're viewing a transaction
 							true, // animated
 							function(err)
@@ -680,7 +728,7 @@ class SendFundsView extends View
 		const estimatedTotalFee_JSBigInt = /*hostingServiceFee_JSBigInt.add(estimatedNetworkFee_JSBigInt)
 		const estimatedTotalFee_str = monero_utils.formatMoney(estimatedTotalFee_JSBigInt)
 		*/
-		const estimatedTotalFee_str = "0.028" 
+		const estimatedTotalFee_str = "0.028"
 		// Just hard-coding this to a reasonable estimate for now as the fee estimator algo uses the median blocksize which results in an estimate about twice what it should be
 		var displayString = `+ ${estimatedTotalFee_str} EST. FEE`
 		//
@@ -761,7 +809,7 @@ class SendFundsView extends View
 	_dismissValidationMessageLayer()
 	{
 		const self = this
-		self.validationMessageLayer.ClearAndHideMessage() 
+		self.validationMessageLayer.ClearAndHideMessage()
 	}
 	//
 	//
@@ -786,7 +834,7 @@ class SendFundsView extends View
 				self.useCamera_buttonView.Disable()
 			}
 			self.chooseFile_buttonView.Disable()
-			// 
+			//
 			self.amountInputLayer.disabled = true
 			self.manualPaymentIDInputLayer.disabled = true
 			self.contactOrAddressPickerLayer.ContactPicker_inputLayer.disabled = true
@@ -798,15 +846,15 @@ class SendFundsView extends View
 		function _reEnableFormElements()
 		{
 			self.isFormDisabled = false
-			self.context.userIdleInWindowController.ReEnable_userIdle()					
+			self.context.userIdleInWindowController.ReEnable_userIdle()
 			if (self.context.Cordova_isMobile === true) {
 				window.plugins.insomnia.allowSleepAgain() // re-enable screen dim/off
 			}
 			//
-			self.enable_submitButton() 
+			self.enable_submitButton()
 			self.amountInputLayer.disabled = false
 			self.manualPaymentIDInputLayer.disabled = false
-			self.contactOrAddressPickerLayer.ContactPicker_inputLayer.disabled = false // making sure to re-enable 
+			self.contactOrAddressPickerLayer.ContactPicker_inputLayer.disabled = false // making sure to re-enable
 			self.walletSelectView.SetEnabled(true)
 			//
 			if (self.useCamera_buttonView) {
@@ -863,8 +911,8 @@ class SendFundsView extends View
 		const resolvedPaymentID_exists = resolvedPaymentID !== "" // NOTE: it might be hidden, though!
 		const resolvedPaymentID_fieldIsVisible = self.resolvedPaymentID_containerLayer.style.display === "block"
 		//
-		const canUseManualPaymentID = 
-			manuallyEnteredPaymentID_exists 
+		const canUseManualPaymentID =
+			manuallyEnteredPaymentID_exists
 			&& manuallyEnteredPaymentID_fieldIsVisible
 			&& !resolvedPaymentID_fieldIsVisible // but not if we have a resolved one!
 		if (canUseManualPaymentID && hasPickedAContact) {
@@ -905,7 +953,7 @@ class SendFundsView extends View
 			var isIntegratedAddress;
 			if (is_enteredAddressValue_OAAddress !== true) {
 				// then it's an XMR addr
-				var address__decode_result; 
+				var address__decode_result;
 				try {
 					address__decode_result = monero_utils.decode_address(enteredAddressValue)
 				} catch (e) {
@@ -1122,7 +1170,7 @@ class SendFundsView extends View
 	// Runtime - Imperatives - Navigation
 	//
 	pushDetailsViewFor_transaction(
-		sentFrom_wallet, 
+		sentFrom_wallet,
 		transaction
 	)
 	{
@@ -1146,14 +1194,14 @@ class SendFundsView extends View
 			throw self.constructor.name + " requires navigationController to " + _cmd
 		}
 		{
-			const options = 
+			const options =
 			{
 				wallet: sentFrom_wallet,
 				transaction: transaction
 			}
 			const view = new JustSentTransactionDetailsView(options, self.context) // note JustSentTransactionDetailsView
 			navigationController.PushView(
-				view, 
+				view,
 				true // animated
 			)
 			// Now… since this is JS, we have to manage the view lifecycle (specifically, teardown) so
@@ -1179,7 +1227,7 @@ class SendFundsView extends View
 			}
 		}
 	}
-	// Runtime - Protocol / Delegation - Stack & modal navigation 
+	// Runtime - Protocol / Delegation - Stack & modal navigation
 	// We don't want to naively do this on VDA as else tab switching may trigger it - which is bad
 	navigationView_didDismissModalToRevealView()
 	{
@@ -1223,7 +1271,7 @@ class SendFundsView extends View
 				self._hideResolvedPaymentID() // in case it's visible… although it wouldn't be
 			}
 		}
-		// look up the payment ID again 
+		// look up the payment ID again
 		{ // (and show the "resolving UI")
 			self.resolving_activityIndicatorLayer.style.display = "block"
 			self.disable_submitButton()
@@ -1294,7 +1342,7 @@ class SendFundsView extends View
 				return
 			}
 		}
-		// 
+		//
 		//
 		self.cancelAny_requestHandle_for_oaResolution()
 		self._hideResolvedAddress()
@@ -1312,7 +1360,7 @@ class SendFundsView extends View
 		//
 		const isOAAddress = monero_openalias_utils.IsAddressNotMoneroAddressAndThusProbablyOAAddress(enteredPossibleAddress)
 		if (isOAAddress !== true) {
-			var address__decode_result; 
+			var address__decode_result;
 			try {
 				address__decode_result = monero_utils.decode_address(enteredPossibleAddress)
 			} catch (e) {
@@ -1384,7 +1432,7 @@ class SendFundsView extends View
 				} else {
 					// we already hid it above
 				}
-				
+
 				if (typeof payment_id !== 'undefined' && payment_id) {
 					self.addPaymentIDButtonView.layer.style.display = "none"
 					self.manualPaymentIDInputLayer_containerLayer.style.display = "none"
@@ -1408,21 +1456,21 @@ class SendFundsView extends View
 	//
 	//
 	// Runtime - Delegation - Request URI string picking - Parsing / consuming / yielding
-	//	
+	//
 	_shared_didPickQRCodeAtPath(absoluteFilePath)
 	{
 		const self = this
 		if (self.isFormDisabled === true) {
 			console.warn("Disallowing QR code pick form disabled.")
 			return
-		}		
+		}
 		const width = 256
 		const height = 256 // TODO: can we / do we need to read these from the image itself?
 		//
 		const canvas = document.createElement("canvas")
 		const context = canvas.getContext("2d")
 		canvas.width = width
-		canvas.height = height 
+		canvas.height = height
 		//
 		const img = document.createElement("img")
 		img.addEventListener(
@@ -1482,21 +1530,21 @@ class SendFundsView extends View
 						// so this request's address corresponds with this contact…
 						// how does the payment id match up?
 						/*
-						 * Commented until we figure out this payment ID situation. 
+						 * Commented until we figure out this payment ID situation.
 						 * The problem is that the person who uses this request to send
 						 * funds (i.e. the user here) may have the target of the request
 						 * in their Address Book (the req creator) but the request recipient
 						 * would have in their address book a /different/ payment_id for the target
 						 * than the payment_id in the contact used by the creator to generate
 						 * this request.
-						
+
 						 * One proposed solution is to give contacts a "ReceiveFrom-With" and "SendTo-With"
 						 * payment_id. Then when a receiver loads a request (which would have a payment_id of
-						 * the creator's receiver contact's version of "ReceiveFrom-With"), we find the contact 
+						 * the creator's receiver contact's version of "ReceiveFrom-With"), we find the contact
 						 * (by address/cachedaddr) and if it doesn't yet have a "SendTo-With" payment_id,
 						 * we show it as 'detected', and set its value to that of ReceiveFrom-With from the request
 						 * if they hit send. This way users won't have to send each other their pids.
-						
+
 						 * Currently, this is made to work below by not looking at the contact itself for payment
 						 * ID match, but just using the payment ID on the request itself, if any.
 
@@ -1544,20 +1592,20 @@ class SendFundsView extends View
 			if (payment_id_orNull !== null) { // but display it as a 'detected' pid
 				self.addPaymentIDButtonView.layer.style.display = "none" // hide if showing
 				self.manualPaymentIDInputLayer_containerLayer.style.display = "none" // hide if showing
-				self.manualPaymentIDInputLayer.value = "" 
+				self.manualPaymentIDInputLayer.value = ""
 				self._displayResolvedPaymentID(payment_id_orNull)
 			} else {
 				self._hideResolvedPaymentID() // jic
 				self.addPaymentIDButtonView.layer.style.display = "block" // hide if showing
 				self.manualPaymentIDInputLayer_containerLayer.style.display = "none" // hide if showing
-				self.manualPaymentIDInputLayer.value = "" 
+				self.manualPaymentIDInputLayer.value = ""
 			}
 		}
 	}
 	//
 	//
 	// Runtime - Delegation - Request URI string picking - Entrypoints
-	//	
+	//
 	__didSelect_actionButton_chooseFile()
 	{
 		const self = this
@@ -1570,7 +1618,7 @@ class SendFundsView extends View
 			"Open Monero Request",
 			function(err, absoluteFilePath)
 			{
-				self.context.userIdleInWindowController.ReEnable_userIdle()					
+				self.context.userIdleInWindowController.ReEnable_userIdle()
 				if (typeof self.context.Cordova_disallowLockDownOnAppPause !== 'undefined') {
 					self.context.Cordova_disallowLockDownOnAppPause -= 1 // place lock so Android app doesn't tear down UI and mess up flow
 				}
